@@ -1,0 +1,25 @@
+---
+title: "Smart Price: Understanding Job Warnings"
+---
+
+<div className="crumbs"><a href="/payfactors">Payfactors</a><span>›</span><a href="/payfactors/reference">Reference</a></div>
+
+Within **Smart price**, job warnings appear in **Benchmarking**. For more information on that area, see [Smart Price: Benchmarking Jobs](/payfactors/how-to/smart-price-benchmarking-jobs).
+
+## Critical Warnings
+
+Critical warnings must be resolved before you can progress to the **Align** workflow.
+
+| Issue | Description | Resolution |
+| --- | --- | --- |
+| No data | The job pricing has no reportable data in any source. | You'll have to provide data manually by matching a job, removing the job, etc. |
+
+## Caution Warnings
+
+You aren't required to resolve caution warnings, but you may want to be aware of them.
+
+| Issue | Description | Resolution |
+| --- | --- | --- |
+| Low confidence match | The job matching model's confidence score for a job falls below the expected threshold. While data exists, the model is uncertain about the match quality. | You may want to accept, refine, or override the match. |
+| Market data outlier | One data sources in a job pricing composite differs by a threshold percentage above or below the average of all sources, identifying an unusual data pattern. | You may investigate the source's scoping or accept the variance. |
+| All-data scope fallback | The requested scope for a data cut isn't reportable. The system then reverts to a wider all-data scope to return a result. | You may accept the broader scope or select a different scope. |

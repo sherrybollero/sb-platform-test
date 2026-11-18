@@ -1,0 +1,88 @@
+---
+title: "AI Matching in Ascent and Payfactors"
+---
+
+<div className="crumbs"><a href="/payfactors">Payfactors</a><span>›</span><a href="/payfactors/explanation">Explanations</a></div>
+
+AI-powered job matching appears in several locations across the Ascent and Payfactors platforms.
+
+| Feature Area | Subscription | Data Source Matched | Uses AI Match Suggestions |
+|---|---|---|---|
+| Pricing Updates | Ascent Core/Premier, Payfactors | Survey | Yes |
+| Price at Scale | Ascent Premier; Payfactors Advanced | Survey | Yes |
+| Smart Price (Benchmark) | Ascent (all) | Survey, Peer, Peer Enhanced | Yes; survey-source only |
+| Price a Job | Ascent Elite | Survey | Yes |
+| Explore | Ascent (all) | Peer Enhanced | No |
+| Jobs and Pricing Projects | Payfactors | Peer | No; separate Peer model |
+
+## AI Match Suggestions: Pricing Updates (Year-Over-Year Survey Matching)
+
+The **AI Match Suggestions** feature uses an artificial intelligence (AI) model to analyze and compare information about jobs in a user's loaded surveys to automatically produce a list of the most relevant job matches. The user may then review the suggestions and accept or ignore them.
+
+### Model and Training
+
+The **AI Match Suggestions** feature is powered by a large language model that has been fine-tuned using Payscale product usage data. The model is trained and hosted within Payscale's firewall, and no training data is, or will be, shared externally. The model is used to index textual information about the survey jobs (i.e., job title, job description, job family, and job code) that have been loaded into Payscale's systems. This index is used to power search and match recommendations on the platform.
+
+### Functionality
+
+In **Pricing updates** workflows, the **AI Match Suggestions** feature is used to maintain prior-year job matches during the annual survey refresh cycle. The index is used to find current survey jobs that are the most similar to out-of-date, previously matched jobs, so that a user's matches carry forward year over year using the newest available survey data. Where a prior match can't be found, the model surfaces the closest available alternative. The system presents the top survey job matches, and the user has the option to either accept or ignore them.
+
+## AI Match Suggestions: Price at Scale (Ascent Premier/Payfactors Advanced)
+
+**AI Match Suggestions** is also available within **Price at scale**, available to Ascent Premier and Payfactors Advanced users. This feature extends the same underlying **AI Match Suggestions** model to bulk pricing so that users pricing large volumes of jobs can review and apply AI-recommended matches without leaving the workflow.
+
+### Model and Training
+
+**Price at scale** uses the same **AI Match Suggestions** model for year-over-year survey updates. See the previous [Model and Training](#model-and-training) section for more information.
+
+### Functionality
+
+Once a user applies their pricing rules and assigns priorities, **AI Match Suggestions** identifies the best-fit survey job matches for unmatched jobs or jobs that could have a stronger match, and surfaces alternatives when an exact match can't be found. Suggested matches are ranked alongside the user's existing matches, and the user may review, accept, or ignore them in bulk.
+
+## AI Job Matching: Smart Price (Ascent Foundation/Core/Premier/Elite)
+
+**Smart price** uses AI job matching at the **Benchmark** step of the workflow to find the most relevant market data for each company job.
+
+### Model and Training
+
+For survey-sourced data, **Smart price** uses the [AI Match Suggestions model](#model-and-training). Peer- and Peer Enhanced-sourced matching don't use **AI Match Suggestions**.
+
+### Functionality
+
+The model recommends best-fit data cuts per job, blending up to 20 contributing data cuts into a single composite benchmark. The user reviews the AI-recommended matches, adjusts as needed, sets target percentiles, and refines matches before proceeding to the **Align** and **Review** steps. On non-Elite tiers, **Smart price** provides market job matches based on the best match identified by the model. On the Elite tier, **Smart price** shows user's existing matches and matches the model recommends that can be used for year-over-year updates where the user chooses to accept new matches that may differ from a prior exact match.
+
+## AI Job Matching: Price a Job (Ascent Elite)
+
+**Price a job** is an individual job-pricing workflow, available with Ascent Elite, that uses survey data for single-job pricing lookups.
+
+### Model and Training
+
+**Price a job** uses the underlying [AI Match Suggestions model](#model-and-training).
+
+### Functionality
+
+The model surfaces the most relevant survey job match(es) for the selected company job. A "propagation" capability allows a user to price one job and apply the resulting match logic to similar jobs in bulk.
+
+## Semantic Search Matching: Explore
+
+**Explore** is a market-lookup tool, available across Ascent tiers, that allows a user to enter a job title and receive a live market view from Peer Enhanced data without creating a job match or committing to a price.
+
+### Model and Training
+
+**Explore** uses a semantic search model to interpret a user-entered job title. It's designed for open-ended searching rather than structured job-to-job matching.
+
+### Functionality
+
+The user enters a job title (or a plain-language description of a role) and receives a ranked set of relevant market data, with no job match required and no pricing action taken. **Explore** doesn't create or store a match; it's a "quick check" tool rather than a pricing workflow.
+
+## AI-Enhanced Peer: Individual Data Cuts (Jobs and Pricing Projects)
+
+**AI-Enhanced Peer** allows a user to generate a modeled Peer data cut for an individual job when standard Peer data is unavailable for that job, industry, size, and location combination.
+
+### Model and Training
+
+**AI-Enhanced Peer** is powered by a separate Peer data model developed and hosted by Payscale's Data Science and Data Engineering Teams. Unlike **AI Match Suggestions**, it doesn't index survey job text; instead, it accepts structured inputs (i.e., job title and level, industry, organization size, and location) and returns modeled percentile pay values along with the compensable factors used to generate them.
+
+### Functionality
+
+Where a company job isn't matched to a Peer job, a job-matching step is presented to the user in the same way as on the standard **Peer Exchange** tab. Once matched, the user can select industry, size, and location filters (defaulted to the pay market's configuration) to generate an **AI-Enhanced Peer** data cut, shown as a pricing details graph with average and percentile values. The resulting cut can be added to a pricing project or published pricing and is flagged in the system with an "AI Enhanced" indicator, along with generated effective dates.

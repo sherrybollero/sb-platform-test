@@ -1,72 +1,404 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
-  "name": "Mintlify Starter Kit",
+  "name": "Payscale User Guides",
   "colors": {
-    "primary": "#16A34A",
-    "light": "#07C983",
-    "dark": "#15803D"
+    "primary": "#0a4444",
+    "light": "#23a4b5",
+    "dark": "#0a4444"
   },
-  "favicon": "/favicon.svg",
-  "navigation": {
-    "pages": [
-      {
-        "group": "Getting Started",
-        "pages": [
-          "index",
-          "quickstart"
-        ]
-      }
-    ],
-    "global": {
-      "anchors": [
-        {
-          "anchor": "Documentation",
-          "href": "https://mintlify.com/docs",
-          "icon": "book-open-cover"
-        },
-        {
-          "anchor": "Blog",
-          "href": "https://mintlify.com/blog",
-          "icon": "newspaper"
-        }
-      ]
+  "background": {
+    "color": {
+      "light": "#f4f2ea",
+      "dark": "#041e1e"
     }
   },
+  "fonts": {
+    "body": {
+      "family": "Inter"
+    }
+  },
+  "favicon": "/favicon.svg",
+  "styling": {
+    "eyebrows": "breadcrumbs"
+  },
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Home",
+        "pages": [
+          "index"
+        ]
+      },
+      {
+        "tab": "Ascent Elite",
+        "pages": [
+          "ascent-elite/index",
+          {
+            "group": "Quick Start",
+            "root": "ascent-elite/quick-start/index",
+            "expanded": true,
+            "pages": []
+          },
+          {
+            "group": "How-To Guides",
+            "root": "ascent-elite/how-to/index",
+            "expanded": true,
+            "pages": []
+          },
+          {
+            "group": "Explanations",
+            "root": "ascent-elite/explanation/index",
+            "expanded": true,
+            "pages": []
+          },
+          {
+            "group": "Reference",
+            "root": "ascent-elite/reference/index",
+            "expanded": true,
+            "pages": []
+          }
+        ]
+      },
+      {
+        "tab": "Ascent Premier and Core",
+        "pages": [
+          "ascent-premier-core/index",
+          {
+            "group": "Quick Start",
+            "root": "ascent-premier-core/quick-start/index",
+            "expanded": true,
+            "pages": [
+              {
+                "group": "Get Started with Payfactors",
+                "expanded": false,
+                "pages": [
+                  "ascent-premier-core/quick-start/customize-your-first-homepage"
+                ]
+              }
+            ]
+          },
+          {
+            "group": "How-To Guides",
+            "root": "ascent-premier-core/how-to/index",
+            "expanded": true,
+            "pages": [
+              {
+                "group": "Get Started with Payfactors",
+                "expanded": false,
+                "pages": [
+                  "ascent-premier-core/how-to/customizing-the-homepage",
+                  "ascent-premier-core/how-to/navigating-the-toolbar"
+                ]
+              },
+              {
+                "group": "Benchmark & Position Pay",
+                "expanded": false,
+                "pages": [
+                  "ascent-premier-core/how-to/using-the-benchmarking-status-section",
+                  "ascent-premier-core/how-to/setting-your-workforce-positioning-target"
+                ]
+              }
+            ]
+          },
+          {
+            "group": "Explanations",
+            "root": "ascent-premier-core/explanation/index",
+            "expanded": true,
+            "pages": [
+              {
+                "group": "Get Started with Payfactors",
+                "expanded": false,
+                "pages": [
+                  "ascent-premier-core/explanation/understanding-the-ascent-homepage"
+                ]
+              }
+            ]
+          },
+          {
+            "group": "Reference",
+            "root": "ascent-premier-core/reference/index",
+            "expanded": true,
+            "pages": [
+              "ascent-premier-core/reference/homepage-product-areas",
+              "ascent-premier-core/reference/homepage-sections"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Marketpay",
+        "pages": [
+          "marketpay/index",
+          {
+            "group": "Quick Start",
+            "root": "marketpay/quick-start/index",
+            "expanded": true,
+            "pages": []
+          },
+          {
+            "group": "How-To Guides",
+            "root": "marketpay/how-to/index",
+            "expanded": true,
+            "pages": []
+          },
+          {
+            "group": "Explanations",
+            "root": "marketpay/explanation/index",
+            "expanded": true,
+            "pages": []
+          },
+          {
+            "group": "Reference",
+            "root": "marketpay/reference/index",
+            "expanded": true,
+            "pages": []
+          }
+        ]
+      },
+      {
+        "tab": "Paycycle",
+        "pages": [
+          "paycycle/index",
+          {
+            "group": "Quick Start",
+            "root": "paycycle/quick-start/index",
+            "expanded": true,
+            "pages": []
+          },
+          {
+            "group": "How-To Guides",
+            "root": "paycycle/how-to/index",
+            "expanded": true,
+            "pages": []
+          },
+          {
+            "group": "Explanations",
+            "root": "paycycle/explanation/index",
+            "expanded": true,
+            "pages": []
+          },
+          {
+            "group": "Reference",
+            "root": "paycycle/reference/index",
+            "expanded": true,
+            "pages": []
+          }
+        ]
+      },
+      {
+        "tab": "Paycycle 2.0",
+        "pages": [
+          "paycycle-2/index",
+          {
+            "group": "Quick Start",
+            "root": "paycycle-2/quick-start/index",
+            "expanded": true,
+            "pages": []
+          },
+          {
+            "group": "How-To Guides",
+            "root": "paycycle-2/how-to/index",
+            "expanded": true,
+            "pages": []
+          },
+          {
+            "group": "Explanations",
+            "root": "paycycle-2/explanation/index",
+            "expanded": true,
+            "pages": []
+          },
+          {
+            "group": "Reference",
+            "root": "paycycle-2/reference/index",
+            "expanded": true,
+            "pages": []
+          }
+        ]
+      },
+      {
+        "tab": "Payfactors",
+        "pages": [
+          "payfactors/index",
+          {
+            "group": "Quick Start",
+            "root": "payfactors/quick-start/index",
+            "expanded": true,
+            "pages": []
+          },
+          {
+            "group": "How-To Guides",
+            "root": "payfactors/how-to/index",
+            "expanded": true,
+            "pages": [
+              {
+                "group": "Get Started with Payfactors",
+                "expanded": false,
+                "pages": [
+                  "payfactors/how-to/ascent-payfactors-navigating-the-toolbar",
+                  "payfactors/how-to/managing-the-ascent-payfactors-homepage"
+                ]
+              },
+              {
+                "group": "Benchmark & Position Pay",
+                "expanded": false,
+                "pages": [
+                  "payfactors/how-to/smart-price-benchmarking-jobs"
+                ]
+              },
+              {
+                "group": "Price & Value Jobs",
+                "expanded": false,
+                "pages": [
+                  "payfactors/how-to/price-at-scale-managing-matching-survey-jobs-to-company-jobs",
+                  "payfactors/how-to/smart-price-creating-and-managing-a-project"
+                ]
+              },
+              {
+                "group": "Report & Analyze Compensation Data",
+                "expanded": false,
+                "pages": [
+                  "payfactors/how-to/compass-managing-the-segment-performance-page",
+                  "payfactors/how-to/smart-reporting-applying-report-filters",
+                  "payfactors/how-to/smart-reporting-using-the-reporting-agent"
+                ]
+              },
+              {
+                "group": "Administration",
+                "expanded": false,
+                "pages": [
+                  "payfactors/how-to/configuring-the-manager-landing-page"
+                ]
+              }
+            ]
+          },
+          {
+            "group": "Explanations",
+            "root": "payfactors/explanation/index",
+            "expanded": true,
+            "pages": [
+              {
+                "group": "Price & Value Jobs",
+                "expanded": false,
+                "pages": [
+                  "payfactors/explanation/ai-matching-in-ascent-and-payfactors"
+                ]
+              }
+            ]
+          },
+          {
+            "group": "Reference",
+            "root": "payfactors/reference/index",
+            "expanded": true,
+            "pages": [
+              "payfactors/reference/ascent-payfactors-homepage-overview",
+              "payfactors/reference/smart-price-understanding-job-warnings"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Release Notes",
+        "pages": [
+          "release-notes/index",
+          {
+            "group": "Ascent Elite and Marketpay",
+            "root": "release-notes/ascent-elite-marketpay/index",
+            "expanded": true,
+            "pages": []
+          },
+          {
+            "group": "Ascent Premier and Core and Payfactors",
+            "root": "release-notes/ascent-premier-core-payfactors/index",
+            "expanded": true,
+            "pages": [
+              "release-notes/ascent-premier-core-payfactors/10-07-26"
+            ]
+          },
+          {
+            "group": "Paycycle",
+            "root": "release-notes/paycycle/index",
+            "expanded": true,
+            "pages": []
+          },
+          {
+            "group": "Paycycle 2.0",
+            "root": "release-notes/paycycle-2/index",
+            "expanded": true,
+            "pages": []
+          }
+        ]
+      }
+    ]
+  },
+  "appearance": {
+    "default": "light"
+  },
   "logo": {
-    "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
+    "light": "/logo/payscale-logo.png",
+    "dark": "/logo/payscale-logo.png",
+    "href": "/"
   },
   "navbar": {
     "links": [
       {
-        "label": "Support",
-        "href": "mailto:support@mintlify.com"
+        "label": "Community",
+        "href": "https://connect.payscale.com/s/discussions"
+      },
+      {
+        "label": "Academy",
+        "href": "https://academy.payscale.com/"
+      },
+      {
+        "label": "User Guides",
+        "href": "/"
+      },
+      {
+        "label": "Glossary",
+        "href": "/glossary"
+      },
+      {
+        "label": "Live Events",
+        "href": "https://connect.payscale.com/s/"
+      },
+      {
+        "label": "Release Notes",
+        "href": "/release-notes"
+      },
+      {
+        "label": "Groups",
+        "href": "https://connect.payscale.com/s/"
+      },
+      {
+        "label": "Contact Support",
+        "href": "https://connect.payscale.com/s/contactsupport"
       }
-    ],
-    "primary": {
-      "type": "button",
-      "label": "Dashboard",
-      "href": "https://app.mintlify.com"
-    }
-  },
-  "contextual": {
-    "options": [
-      "copy",
-      "view",
-      "chatgpt",
-      "claude",
-      "perplexity",
-      "mcp",
-      "cursor",
-      "vscode"
     ]
   },
+  "feedback": {
+    "thumbsRating": true,
+    "suggestEdit": false,
+    "raiseIssue": false
+  },
   "footer": {
-    "socials": {
-      "x": "https://x.com/mintlify",
-      "github": "https://github.com/mintlify",
-      "linkedin": "https://linkedin.com/company/mintlify"
-    }
+    "links": [
+      {
+        "header": "Payscale",
+        "items": [
+          {
+            "label": "Community",
+            "href": "https://connect.payscale.com/s/discussions"
+          },
+          {
+            "label": "Academy",
+            "href": "https://academy.payscale.com/"
+          },
+          {
+            "label": "Contact Support",
+            "href": "https://connect.payscale.com/s/contactsupport"
+          }
+        ]
+      }
+    ]
   }
 }
